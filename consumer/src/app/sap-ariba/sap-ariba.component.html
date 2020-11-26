@@ -1,0 +1,21 @@
+<div class="form__container">
+  <h3>SAP Ariba form</h3>
+  <form >
+    <div class="input-group">
+      <label>First Name</label>
+      <input type="text" [value]="form.firstName" id="first-name" />
+    </div>
+    <div class="input-group">
+      <label>Last Name</label>
+      <input type="text" [value]="form.lastName" id="last-name" />
+    </div>
+    <div class="input-group">
+      <label>Role</label>
+      <input type="text" [value]="form.role" id="role" />
+    </div>
+    <div>
+      <button type="button" (click)="onSubmit()">Submit</button>
+    </div>
+    <div *ngIf="resultMessage">{{ resultMessage }}</div>
+  </form>
+</div>

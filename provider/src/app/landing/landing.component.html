@@ -1,0 +1,21 @@
+<div class="form__container">
+  <h3>SAP Ariba look-alike form</h3>
+  <form >
+    <div class="input-group">
+      <label>First Name</label>
+      <input type="text" [value]="form.firstName" (input)="form.firstName=$event.target.value" />
+    </div>
+    <div class="input-group">
+      <label>Last Name</label>
+      <input type="text" [value]="form.lastName" (input)="form.lastName=$event.target.value" />
+    </div>
+    <div class="input-group">
+      <label>Role</label>
+      <input type="text" [value]="form.role" (input)="form.role=$event.target.value" />
+    </div>
+    <div>
+      <button type="button" (click)="onSubmit()">Save to localStorage</button>
+    </div>
+    <div *ngIf="resultMessage">{{ resultMessage }}</div>
+  </form>
+</div>
