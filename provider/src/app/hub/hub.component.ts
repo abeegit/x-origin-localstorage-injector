@@ -11,7 +11,6 @@ export class HubComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    console.log("loading iframe")
     CrossStorageHub.init([
       {origin: /localhost:4201$/, allow: ['get']},
     ]);

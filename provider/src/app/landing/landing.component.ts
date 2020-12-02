@@ -1,4 +1,5 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-landing',
@@ -9,12 +10,14 @@ export class LandingComponent implements OnInit, OnDestroy {
 
   form: any;
 
+  name: any = "";
+
   resultMessage: string | null = null;
 
   resultMessageTimeout: any = null;
 
-  constructor() {
-    
+  constructor(private title: Title) {
+    this.title.setTitle("SAP Ariba look-alike form");
   }
 
   ngOnInit(): void {
@@ -23,6 +26,10 @@ export class LandingComponent implements OnInit, OnDestroy {
       lastName: "",
       role: ""
     };
+  }
+
+  getValue(input: HTMLInputElement) {
+    return input.value;
   }
 
   ngOnDestroy(): void {

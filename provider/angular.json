@@ -33,7 +33,8 @@
             "styles": [
               "src/styles.sass"
             ],
-            "scripts": []
+            "scripts": [],
+            "allowedCommonJsDependencies": ["cross-storage"]
           },
           "configurations": {
             "production": {

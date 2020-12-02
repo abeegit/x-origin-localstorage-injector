@@ -1,7 +1,7 @@
 {
-  "name": "My first browser extension",
+  "name": "SAP Ariba AutoFill",
   "version": "1.0",
-  "description": "Build an Extension!",
+  "description": "This extension copies form data filled on a SAP Ariba lookalike form",
   "permissions": ["activeTab", "declarativeContent", "storage"],
   "background": {
     "scripts": ["background.js"],
